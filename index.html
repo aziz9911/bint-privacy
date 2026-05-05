@@ -28,8 +28,8 @@
         let isEnglish = false;
         function toggleLang() {
             isEnglish = !isEnglish;
-            document.querySelectorAll('.ar').forEach(e => e.style.display = isEnglish ? 'none' : '');
-            document.querySelectorAll('.en').forEach(e => e.style.display = isEnglish ? '' : 'none');
+            document.querySelectorAll('.ar').forEach(e => e.style.display = isEnglish ? 'none' : 'block');
+            document.querySelectorAll('.en').forEach(e => e.style.display = isEnglish ? 'block' : 'none');
             document.querySelector('.lang-toggle a').textContent = isEnglish ? 'العربية' : 'English';
         }
     </script>
