@@ -24,12 +24,15 @@
         .en { display: none; direction: ltr; text-align: left; }
         .en h2 { color: #d4a853; }
     </style>
-    <script>
-        function toggleLang() {
-            document.querySelectorAll('.ar').forEach(e => e.style.display = e.style.display === 'none' ? '' : 'none');
-            document.querySelectorAll('.en').forEach(e => e.style.display = e.style.display === 'none' ? '' : 'none');
-        }
-    </script>
+    <script>                                                                                                                                                                      
+      let isEnglish = false;                                                                                                                                                    
+      function toggleLang() {                                                                                                                                                   
+          isEnglish = !isEnglish;                                                                                                                                               
+          document.querySelectorAll('.ar').forEach(e => e.style.display = isEnglish ? 'none' : '');                                                                             
+          document.querySelectorAll('.en').forEach(e => e.style.display = isEnglish ? '' : 'none');
+          document.querySelector('.lang-toggle a').textContent = isEnglish ? 'العربية' : 'English';                                                                             
+      }                                                                                                                                                                       
+  </script>
 </head>
 <body>
 
@@ -74,7 +77,7 @@
 <p>سنقوم بتحديث هذه الصفحة عند إجراء أي تغييرات. ننصح بمراجعتها بشكل دوري.</p>
 
 <h2>٩. تواصل معنا</h2>
-<p>لأي استفسار حول الخصوصية، تواصل معنا عبر: <a href="mailto:support@bintAlSpade.app">support@bintAlSpade.app</a></p>
+<p>لأي استفسار حول الخصوصية، تواصل معنا عبر: <a href="mailto:support@bintAlSpade.com">support@bintAlSpade.app</a></p>
 </div>
 
 <!-- English -->
@@ -116,7 +119,7 @@
 <p>We will update this page if any changes are made. We recommend reviewing it periodically.</p>
 
 <h2>9. Contact Us</h2>
-<p>For privacy inquiries, contact us at: <a href="mailto:support@bintAlSpade.app">support@bintAlSpade.app</a></p>
+<p>For privacy inquiries, contact us at: <a href="mailto:support@bintAlSpade.com">support@bintAlSpade.com</a></p>
 </div>
 
 </body>
